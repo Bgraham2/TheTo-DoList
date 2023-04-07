@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    private static final String TAG = "Main Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Log.d(TAG, " Add Task Button Clicked");
+                AddTaskDialogFragment  addTaskDialogFragment = new AddTaskDialogFragment();
+                addTaskDialogFragment.show(getSupportFragmentManager(), "Add Task Dialog Fragment");
             }
         });
     }
