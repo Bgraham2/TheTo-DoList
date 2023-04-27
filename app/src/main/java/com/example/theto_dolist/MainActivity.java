@@ -2,7 +2,6 @@ package com.example.theto_dolist;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements ReturnTask {
     }
 
     @Override
-    public void returnTask(String task, boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday) {
+    public void returnTask(DailyTask dailyTask) {
 
     }
 }

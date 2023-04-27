@@ -40,8 +40,9 @@ public class AddTaskDialogFragment extends androidx.fragment.app.DialogFragment 
         Button buttonSave = viewAddTask.findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(view -> {
             Log.d(TAG, " Task Saved.");
-            returnTask.returnTask(editTextAddTask.getText().toString(), checkBoxSunday.isChecked(), checkBoxMonday.isChecked(), checkBoxTuesday.isChecked(),
+            DailyTask dailyTask = new DailyTask(editTextAddTask.getText().toString(), checkBoxSunday.isChecked(), checkBoxMonday.isChecked(), checkBoxTuesday.isChecked(),
                     checkBoxWednesday.isChecked(), checkBoxThursday.isChecked(), checkBoxFriday.isChecked(), checkBoxSaturday.isChecked());
+            returnTask.returnTask(dailyTask);
             dismiss();
         });
 
